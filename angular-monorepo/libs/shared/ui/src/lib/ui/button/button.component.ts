@@ -1,5 +1,5 @@
-import { NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { NgClass, NgIf } from '@angular/common';
+import { Component, EventEmitter, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -15,9 +15,20 @@ export interface ButtonConfig {
 @Component({
   selector: 'lib-button',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, MatProgressSpinnerModule, NgIf],
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    NgIf,
+    NgClass,
+  ],
   template: `
-    <button mat-button [disabled]="config.disabled || config.loading">
+    <button
+      mat-button
+      [disabled]="config.disabled || config.loading"
+      [ngClass]="config.variant"
+      (click)="onClick.emit($event)"
+    >
       <mat-icon *ngIf="config.icon && !config.loading">{{
         config.icon
       }}</mat-icon>
@@ -58,5 +69,10 @@ export interface ButtonConfig {
   ],
 })
 export class ButtonComponent {
-  @Input() config!: ButtonConfig;
+  disable = false;
+  @Input() config: ButtonConfig = {
+    label: 'Button',
+    variant: 'primary',
+  };
+  @Input() onClick = new EventEmitter();
 }
