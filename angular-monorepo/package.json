@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve angular-monorepo",
+    "start": "nx run angular-monorepo:serve",
     "build": "nx build",
     "test": "nx test"
   },

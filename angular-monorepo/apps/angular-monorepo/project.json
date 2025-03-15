@@ -37,6 +37,14 @@
               "type": "anyComponentStyle",
               "maximumWarning": "4kb",
               "maximumError": "8kb"
+            },
+            {
+              "fileReplacements": [
+                {
+                  "replace": "apps/angular-monorepo/src/environments/environment.ts",
+                  "with": "apps/angular-monorepo/src/environments/environment.prod.ts"
+                }
+              ]
             }
           ],
           "outputHashing": "all"
