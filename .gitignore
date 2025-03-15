@@ -41,3 +41,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+.nx/installation
+.nx/cache
+.nx/workspace-data
