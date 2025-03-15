@@ -1,0 +1,10 @@
+{
+  "installation": {
+    "version": "20.6.0",
+    "plugins": {
+      "@nx/eslint": "20.6.0",
+      "@nx/jest": "20.6.0"
+    }
+  },
+  "nxCloudId": "67d5bc14fc9ebea9d4895717"
+}

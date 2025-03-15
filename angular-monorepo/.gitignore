@@ -1,12 +1,12 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
-/out-tsc
+dist
+tmp
+out-tsc
 
 # dependencies
-/node_modules
+node_modules
 
 # IDEs and editors
 /.idea
@@ -25,23 +25,20 @@
 !.vscode/extensions.json
 
 # misc
-/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
 /typings
-
-# e2e
-/e2e/*.js
-/e2e/*.map
 
 # System Files
 .DS_Store
 Thumbs.db
 
-.nx/installation
 .nx/cache
 .nx/workspace-data
+
+.angular
